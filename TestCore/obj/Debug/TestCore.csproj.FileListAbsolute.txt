@@ -41,7 +41,6 @@ C:\Sources\Study\SkeletonNUnit\TestCore\bin\Debug\WebDriver.dll
 C:\Sources\Study\SkeletonNUnit\TestCore\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Sources\Study\SkeletonNUnit\TestCore\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Sources\Study\SkeletonNUnit\TestCore\bin\Debug\WebDriver.xml
-C:\Sources\Study\SkeletonNUnit\TestCore\obj\Debug\TestCore.csprojResolveAssemblyReference.cache
 C:\Sources\Study\SkeletonNUnit\TestCore\obj\Debug\TestCore.csproj.CoreCompileInputs.cache
 C:\Sources\Study\SkeletonNUnit\TestCore\obj\Debug\TestCore.csproj.CopyComplete
 C:\Sources\Study\SkeletonNUnit\TestCore\obj\Debug\Core.dll
