@@ -19,3 +19,8 @@ C:\Sources\Study\SkeletonNUnit\SkeletonNUnit\SkeletonNUnit\bin\Debug\WebDriver.d
 C:\Sources\Study\SkeletonNUnit\SkeletonNUnit\SkeletonNUnit\bin\Debug\WebDriver.xml
 C:\Sources\Study\SkeletonNUnit\SkeletonNUnit\SkeletonNUnit\bin\Debug\Core.dll
 C:\Sources\Study\SkeletonNUnit\SkeletonNUnit\SkeletonNUnit\bin\Debug\Core.pdb
+C:\Sources\Study\SkeletonNUnit\SkeletonNUnit\SkeletonNUnit\bin\Debug\SkeletonNUnit.dll.config
+C:\Sources\Study\SkeletonNUnit\SkeletonNUnit\SkeletonNUnit\bin\Debug\Autofac.dll
+C:\Sources\Study\SkeletonNUnit\SkeletonNUnit\SkeletonNUnit\bin\Debug\log4net.dll
+C:\Sources\Study\SkeletonNUnit\SkeletonNUnit\SkeletonNUnit\bin\Debug\Autofac.xml
+C:\Sources\Study\SkeletonNUnit\SkeletonNUnit\SkeletonNUnit\bin\Debug\log4net.xml

@@ -46,3 +46,5 @@ C:\Sources\Study\SkeletonNUnit\TestCore\obj\Debug\TestCore.csproj.CoreCompileInp
 C:\Sources\Study\SkeletonNUnit\TestCore\obj\Debug\TestCore.csproj.CopyComplete
 C:\Sources\Study\SkeletonNUnit\TestCore\obj\Debug\Core.dll
 C:\Sources\Study\SkeletonNUnit\TestCore\obj\Debug\Core.pdb
+C:\Sources\Study\SkeletonNUnit\TestCore\bin\Debug\Autofac.dll
+C:\Sources\Study\SkeletonNUnit\TestCore\bin\Debug\Autofac.xml
