@@ -56,7 +56,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Managers\Interfaces\IApplicationManager.cs" />
     <Compile Include="Service\CustomExpectedConditions.cs" />
     <Compile Include="Service\DriverExtensions.cs" />
     <Compile Include="Service\ServiceMethods.cs" />
@@ -68,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\" />
+    <Folder Include="Managers\Interfaces\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

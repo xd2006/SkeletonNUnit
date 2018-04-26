@@ -89,6 +89,7 @@
       <HintPath>..\packages\RestSharp.105.2.1\lib\net46\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
@@ -98,6 +99,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Managers\ApplicationManager.cs" />
+    <Compile Include="Starter.cs" />
+    <Compile Include="Tests\TestBase.cs" />
     <Compile Include="Tests\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -123,7 +126,7 @@
     <Folder Include="Managers\AuxManagers\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dog.png">
+    <Content Include="Data\dog.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -3,27 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using log4net;
+using log4net.Core;
 using log4net.Repository.Hierarchy;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
-using TestCore.Managers.Interfaces;
 
 namespace SkeletonNUnit.Managers
 {
-    public class ApplicationManager: IApplicationManager
+    public class ApplicationManager
     {
 
         private string baseUrl;
 
-        /// <summary>
-        /// The capabilities.
-        /// </summary>
         private ICapabilities capabilities;
 
-        /// <summary>
-        /// The hub url.
-        /// </summary>
-        private string hubUrl;
+       private string hubUrl;
 
         /// <summary>
         /// The _pages.
@@ -38,7 +33,7 @@ namespace SkeletonNUnit.Managers
         /// <summary>
         /// Gets or sets the Log4Net logger.
         /// </summary>
-        public Logger Logger { get; set; }
+        public ILog Logger { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApplicationManager"/> class.
@@ -57,6 +52,7 @@ namespace SkeletonNUnit.Managers
             this.capabilities = capabilities;
             this.baseUrl = baseUrl;
             this.hubUrl = hubUrl;
+            Logger = LogManager.GetLogger("Logger");
         }
     }
 }
