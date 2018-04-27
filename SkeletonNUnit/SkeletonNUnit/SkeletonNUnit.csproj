@@ -103,6 +103,7 @@
     <Compile Include="Managers\AuxManagers\PageManager.cs" />
     <Compile Include="Service\Starter.cs" />
     <Compile Include="Tests\TestBase.cs" />
+    <Compile Include="Tests\UnitTest3.cs" />
     <Compile Include="Tests\UnitTest2.cs" />
     <Compile Include="Tests\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

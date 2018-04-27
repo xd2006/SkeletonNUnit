@@ -59,25 +59,35 @@ namespace SkeletonNUnit.Tests
                     {
                         App.Logger.Warn("Can't make screenshot");
                     }
-                    App.Pages.Driver.Quit();
+                   
                 }
               }
             else
             {
                 App.Logger.Info("Test completed successfully - " + TestContext.CurrentContext.Test.MethodName);
-            }          
+            }
+
+            if (App.PageManagerExists)
+            {
+
+                if (App.Pages.Driver != null)
+                {
+                    WebDriverFactory.DismissLocalThreadDriver();
+                }
+              
+            }
         }
 
-        [OneTimeTearDown]
-        public void FinalTearDown()
-        {
-            this.Clean();
-        }
+//        [OneTimeTearDown]
+//        public void FinalTearDown()
+//        {
+//            this.Clean();
+//        }
       
 
         private void Clean()
         {
-            WebDriverFactory.DismissAll();                 
+            WebDriverFactory.DismissAll();                        
         }
     }
 }

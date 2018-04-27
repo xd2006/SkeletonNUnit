@@ -52,7 +52,15 @@ namespace SkeletonNUnit.Managers.AuxManagers
             Driver = WebDriverFactory.GetDriver(hubUrl, capabilities);
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
-            Driver.Manage().Window.Maximize();
+            try
+            {
+                Driver.Manage().Window.Maximize();
+            }
+            catch(System.InvalidOperationException)
+            {
+                Driver.Manage().Window.Maximize();
+            }
+
             if (!Driver.Url.StartsWith(baseUrl))
             {
                 Driver.Navigate().GoToUrl(baseUrl);

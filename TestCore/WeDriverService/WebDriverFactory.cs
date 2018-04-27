@@ -82,6 +82,11 @@ namespace Core.WeDriverService
             FactoryInstance.__DismissAll();
         }
 
+        public static void DismissLocalThreadDriver()
+        {
+            FactoryInstance.__DismissThreadLocal();
+        }
+
         /// <summary>
         /// Gets the factory instance.
         /// </summary>
@@ -201,6 +206,20 @@ namespace Core.WeDriverService
         }
 
         /// <summary>
+        /// Dismiss thread local driver.
+        /// </summary>
+        private void __DismissThreadLocal()
+        {
+            if (threadLocalDriver.IsValueCreated)
+            {
+                var driver = threadLocalDriver.Value;
+                threadLocalDriver.Value.Quit();
+                driverToKeyMap.Remove(driver);
+            }
+
+        }
+
+        /// <summary>
         /// The create key.
         /// </summary>
         /// <param name="capabilities">
@@ -229,7 +248,8 @@ namespace Core.WeDriverService
         private void CreateNewDriver(ICapabilities capabilities, string hub)
         {
             string newKey = CreateKey(capabilities, hub);
-           IWebDriver driver = (hub == null)
+           
+            IWebDriver driver = (hub == null)
                 ? CreateLocalDriver(capabilities)
                 : CreateRemoteDriver(hub, capabilities);
             driverToKeyMap.Add(driver, newKey);
