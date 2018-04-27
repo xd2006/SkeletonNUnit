@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Core.WeDriverService;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 
 namespace SkeletonNUnit.Managers.AuxManagers
 {
+    
+
     public class PageManager
     {
         /// <summary>
@@ -41,7 +39,7 @@ namespace SkeletonNUnit.Managers.AuxManagers
         public PageManager(DesiredCapabilities capabilities, string baseUrl, string hubUrl)
         {
             if (string.IsNullOrEmpty(hubUrl) && capabilities.BrowserName.ToLower() != "microsoftedge")
-            {
+            {               
                 new WebDriverManager().SetupDriver(capabilities.BrowserName);
             }
             else

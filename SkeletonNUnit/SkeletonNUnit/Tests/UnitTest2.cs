@@ -5,11 +5,12 @@ using SkeletonNUnit.Tests;
 
 namespace SkeletonNUnit
 {
+    [Parallelizable(ParallelScope.All)]
     [TestFixture]
     public class UnitTest2 : TestBase
     {
         [Test]
-        public void TestMethod1()
+        public void TestMethod()
         {
 
             Bridge.LogMessage(ReportPortal.Client.Models.LogLevel.Trace, "class1 test1 log message");
@@ -24,7 +25,7 @@ namespace SkeletonNUnit
         }
 
         [Test]
-        public void TestMethodFail()
+        public void TestMethodFail2()
         {
 
             App.Logger.Debug("My debug log message from Log4Net");          

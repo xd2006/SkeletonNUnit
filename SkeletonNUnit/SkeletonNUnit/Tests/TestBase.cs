@@ -12,7 +12,7 @@ using SkeletonNUnit.Service;
 
 namespace SkeletonNUnit.Tests
 {
-    [Parallelizable(ParallelScope.All)]
+    
     public class TestBase
     {
         private ApplicationManager appM;
@@ -33,6 +33,8 @@ namespace SkeletonNUnit.Tests
         [SetUp]
         public void BeforeTest()
         {
+            var dir = TestContext.CurrentContext.TestDirectory;
+                Environment.CurrentDirectory = dir;
             App.Logger.Info("Test started - " + TestContext.CurrentContext.Test.MethodName);
 
         }
@@ -57,22 +59,25 @@ namespace SkeletonNUnit.Tests
                     {
                         App.Logger.Warn("Can't make screenshot");
                     }
+                    App.Pages.Driver.Quit();
                 }
               }
             else
             {
                 App.Logger.Info("Test completed successfully - " + TestContext.CurrentContext.Test.MethodName);
-            }
+            }          
         }
 
+        [OneTimeTearDown]
+        public void FinalTearDown()
+        {
+            this.Clean();
+        }
+      
 
         private void Clean()
         {
-            WebDriverFactory.DismissAll();
-            App = null;          
+            WebDriverFactory.DismissAll();                 
         }
-
-
-
     }
 }

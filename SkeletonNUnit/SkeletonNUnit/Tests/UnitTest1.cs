@@ -5,6 +5,7 @@ using SkeletonNUnit.Tests;
 
 namespace SkeletonNUnit
 {
+    [Parallelizable(ParallelScope.All)]
     [TestFixture]
     public class UnitTest1 : TestBase
     {

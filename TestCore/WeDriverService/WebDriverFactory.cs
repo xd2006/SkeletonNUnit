@@ -229,7 +229,7 @@ namespace Core.WeDriverService
         private void CreateNewDriver(ICapabilities capabilities, string hub)
         {
             string newKey = CreateKey(capabilities, hub);
-            IWebDriver driver = (hub == null)
+           IWebDriver driver = (hub == null)
                 ? CreateLocalDriver(capabilities)
                 : CreateRemoteDriver(hub, capabilities);
             driverToKeyMap.Add(driver, newKey);
@@ -268,6 +268,7 @@ namespace Core.WeDriverService
         {
             // Implementation is incomplete: the capabilities are not converted to the options for all browsers
             string browserType = capabilities.BrowserName;
+
             if (browserType == DesiredCapabilities.Firefox().BrowserName)
             {
                 return new FirefoxDriver(capabilities);
