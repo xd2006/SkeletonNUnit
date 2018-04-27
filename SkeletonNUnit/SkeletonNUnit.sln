@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkeletonNUnit", "SkeletonNUnit\SkeletonNUnit.csproj", "{A29532AB-CFE4-43B2-8C3B-CB39D36E99C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCore", "..\TestCore\TestCore.csproj", "{8764EB90-9D46-41FE-997B-4DE6DC954830}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\TestCore\Core.csproj", "{8764EB90-9D46-41FE-997B-4DE6DC954830}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

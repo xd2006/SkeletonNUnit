@@ -98,11 +98,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\HelperTemplate.cs" />
     <Compile Include="Managers\ApplicationManager.cs" />
-    <Compile Include="Starter.cs" />
+    <Compile Include="Managers\AuxManagers\PageManager.cs" />
+    <Compile Include="Service\Starter.cs" />
     <Compile Include="Tests\TestBase.cs" />
     <Compile Include="Tests\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\UIElementTemplate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -117,13 +120,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TestCore\TestCore.csproj">
+    <ProjectReference Include="..\..\TestCore\Core.csproj">
       <Project>{8764eb90-9d46-41fe-997b-4de6dc954830}</Project>
-      <Name>TestCore</Name>
+      <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Managers\AuxManagers\" />
+    <Folder Include="Helpers\Api\" />
+    <Folder Include="Helpers\Db\" />
+    <Folder Include="Helpers\UI\" />
+    <Folder Include="Parameters\ParametersSets\" />
+    <Folder Include="UI\Components\" />
+    <Folder Include="UI\Pages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\dog.png">

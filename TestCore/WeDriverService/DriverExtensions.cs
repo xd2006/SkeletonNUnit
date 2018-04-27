@@ -1,10 +1,10 @@
-﻿
-using System;
+﻿using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using TestCore.Service;
 
-namespace TestCore.Service
+namespace Core.WeDriverService
 {
     /// <summary>
     /// The webdriver extensions.
