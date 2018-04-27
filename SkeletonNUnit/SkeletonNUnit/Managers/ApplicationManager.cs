@@ -25,17 +25,7 @@ namespace SkeletonNUnit.Managers
         /// The _pages.
         /// </summary>
         private PageManager pages;
-
-        /// <summary>
-        /// The main.
-        /// </summary>
-//        private MainHelper main;
-
-        /// <summary>
-        /// Gets or sets the Log4Net logger.
-        /// </summary>
-        public ILog Logger { get; set; }
-
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="ApplicationManager"/> class.
         /// </summary>
@@ -57,8 +47,15 @@ namespace SkeletonNUnit.Managers
         }
 
         /// <summary>
+        /// Gets or sets the Log4Net logger.
+        /// </summary>
+        public ILog Logger { get; set; }
+
+        /// <summary>
         /// Gets the pages manager
         /// </summary>
         public PageManager Pages => this.pages ?? (this.pages = new PageManager((DesiredCapabilities) capabilities, this.baseUrl, this.hubUrl));
+
+        public bool PageManagerExists => pages != null;
     }
 }

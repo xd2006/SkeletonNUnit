@@ -12,6 +12,7 @@ using SkeletonNUnit.Service;
 
 namespace SkeletonNUnit.Tests
 {
+    [Parallelizable(ParallelScope.All)]
     public class TestBase
     {
         private ApplicationManager appM;
@@ -42,8 +43,22 @@ namespace SkeletonNUnit.Tests
             if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
             {
                 App.Logger.Warn("Test failed - " + TestContext.CurrentContext.Test.MethodName);
-                new Screenshoter(App.Pages.Driver).TakeScreenshot(App.Pages.Driver, TestContext.CurrentContext.Test.MethodName, TestContext.CurrentContext.TestDirectory + "Logs");
-            }
+
+                if (App.PageManagerExists)
+                {
+                    var screenPath = new Screenshoter(App.Pages.Driver).TakeScreenshot(
+                        TestContext.CurrentContext.Test.MethodName,
+                        TestContext.CurrentContext.TestDirectory + "\\Logs");
+                    if (!string.IsNullOrEmpty(screenPath))
+                    {
+                        App.Logger.Info("Screenshot {rp#file# " + screenPath + "}");
+                    }
+                    else
+                    {
+                        App.Logger.Warn("Can't make screenshot");
+                    }
+                }
+              }
             else
             {
                 App.Logger.Info("Test completed successfully - " + TestContext.CurrentContext.Test.MethodName);

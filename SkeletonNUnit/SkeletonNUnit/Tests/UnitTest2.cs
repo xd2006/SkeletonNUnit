@@ -6,7 +6,7 @@ using SkeletonNUnit.Tests;
 namespace SkeletonNUnit
 {
     [TestFixture]
-    public class UnitTest1 : TestBase
+    public class UnitTest2 : TestBase
     {
         [Test]
         public void TestMethod1()

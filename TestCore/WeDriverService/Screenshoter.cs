@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenQA.Selenium;
 
 namespace Core.WeDriverService
@@ -16,7 +12,7 @@ namespace Core.WeDriverService
             _driver = driver;
         }
 
-        public string TakeScreenshot(IWebDriver driver, string scenarioTitle, string logFolder)
+        public string TakeScreenshot(string scenarioTitle, string logFolder)
         {
             try
             {
@@ -30,7 +26,7 @@ namespace Core.WeDriverService
                     Directory.CreateDirectory(artifactDirectory);
                 }
 
-                ITakesScreenshot takesScreenshot = driver as ITakesScreenshot;
+                ITakesScreenshot takesScreenshot = _driver as ITakesScreenshot;
 
                 if (takesScreenshot != null)
                 {
@@ -50,6 +46,5 @@ namespace Core.WeDriverService
                 return string.Empty;
             }
         }
-
-    }
+     }
 }

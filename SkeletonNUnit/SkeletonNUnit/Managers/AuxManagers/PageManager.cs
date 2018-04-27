@@ -46,7 +46,7 @@ namespace SkeletonNUnit.Managers.AuxManagers
             }
             else
             {
-                capabilities.SetCapability("enableVideo", true);
+//                capabilities.SetCapability("enableVideo", true);
                 capabilities.SetCapability("enableVNC", true);
                 //capabilities.Platform = new Platform(PlatformType.Windows);
             }
